@@ -1,4 +1,9 @@
 # laravel-api-key
+[![Current version](https://img.shields.io/packagist/v/mxl/laravel-api-key.svg?logo=composer)](https://packagist.org/packages/mxl/laravel-api-key)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/mxl/laravel-api-key.svg)](https://packagist.org/packages/mxl/laravel-api-key/stats)
+[![Total Downloads](https://img.shields.io/packagist/dt/mxl/laravel-api-key.svg)](https://packagist.org/packages/mxl/laravel-api-key/stats)
+[![Build Status](https://travis-ci.org/mxl/laravel-api-key.svg?branch=master)](https://travis-ci.org/mxl/laravel-api-key)
+
 API Key Authorization for Laravel with replay attack prevention
 
 ## Installation
