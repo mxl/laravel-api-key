@@ -42,6 +42,11 @@ $ php artisan vendor:publish --provider="MichaelLedin\LaravelApiKey\ApiKeyServic
 
 and modify `config/apiKey.php` file.
 
+
+**Notice!** If you use `php artisan config:cache` or `php artisan optimize` command then you have 
+to publish configuration as described above otherwise `env()` function will return `null` for all environment variables.
+[Read more](https://laravel.com/docs/5.8/deployment#optimizing-configuration-loading).
+
 The configuration has following parameters:
 - `secret` - secret key that is known by client and server;
 - `hash` - an algorithm used to create hash value from secret key and timestamp; for a list of supported algorithms check an output of [hash_algos](https://www.php.net/manual/en/function.hash-algos.php) function;
