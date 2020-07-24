@@ -28,7 +28,7 @@ class ApiKeyServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(
             $this->getConfigFile(),
-            'excel'
+            'apiKey'
         );
     }
 

@@ -60,7 +60,7 @@ class AuthorizeApiKey
 
     protected function init()
     {
-        $secret = config('apiKey.secret');
+        $secret = $this->checkConfigurationProperty('secret');
         if ($secret) {
             $timestampHeader = $this->checkConfigurationPropertyIsNotEmptyString('timestampHeader');
             $window = $this->checkConfigurationPropertyIsPositiveInteger('window');
@@ -70,10 +70,10 @@ class AuthorizeApiKey
         return false;
     }
 
-    protected function checkConfigurationProperty(string $property, callable $check)
+    protected function checkConfigurationProperty(string $property, ?callable $check = null)
     {
         $value = config('apiKey.' . $property);
-        if (($message = $check($value))) {
+        if ($check && ($message = $check($value))) {
             throw new InvalidArgumentException($message);
         }
         return $value;
